@@ -56,24 +56,27 @@ function showCreateTeamMenu() {
         {
             type: "list",
             message: "Select type of employee to create:",
-            choices: ["Engineer", "Intern"],
+            choices: ["Engineer", "Intern", "Finished"],
             name: "menuChoice",
         },
     ]).then(({ menuChoice }) => {
-        switch (menuChoice) {
-            case "Engineer":
-                console.log("engineer");
-                break;
-            case "Intern":
-                console.log("intern");
-                break;
+        if (menuChoice === "Finished") {
+            // ADD CODE
+        } else {
+            createEmployee(menuChoice);
         }
     });
 }
 
-// createEmp(empType){
+function createEmployee(empType) {
+    switch (empType) {
+        case "Engineer":
+            break;
 
-// }
+        case "Intern":
+            break;
+    }
+}
 
 
 createManager();
