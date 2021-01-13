@@ -55,16 +55,16 @@ function showCreateTeamMenu() {
     inquirer.prompt([
         {
             type: "list",
-            message: "Select type of employee to create:",
-            choices: ["Engineer", "Intern", "Finished"],
+            message: "Please make a selection:",
+            choices: ["Create Engineer", "Create Intern", "Finished Building Team"],
             name: "menuChoice",
         },
     ]).then(({ menuChoice }) => {
         switch (menuChoice) {
-            case "Engineer":
+            case "Create Engineer":
                 createEngineer();
                 break;
-            case "Intern":
+            case "Create Intern":
                 createIntern();
                 break;
             default:
