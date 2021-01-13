@@ -59,15 +59,15 @@ function showCreateTeamMenu() {
             choices: ["Engineer", "Intern"],
             name: "menuChoice",
         },
-    ]).then(answers => {
-        console.log(answers);
-        // switch (menuChoice) {
-        //     case "Engineer":
-        //         console.log("engineer");
-        //         break;
-        //     case "Intern":
-        //         console.log("intern");
-        //         break;
+    ]).then(({ menuChoice }) => {
+        switch (menuChoice) {
+            case "Engineer":
+                console.log("engineer");
+                break;
+            case "Intern":
+                console.log("intern");
+                break;
+        }
     });
 }
 
