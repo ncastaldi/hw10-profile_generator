@@ -35,10 +35,10 @@ function createManager() {
             default: "100"
         },
     ]).then(({ mgrFName, mgrLName, mgrOffice }) => {
-        // Construct manager's full name
+        // Construct full name
         const mgrName = mgrFName + " " + mgrLName;
 
-        // Construct manager's email address
+        // Construct email address
         const mgrEmail = mgrFName + "@my-company.com";
 
         // Create new manager object
@@ -99,10 +99,10 @@ function createEngineer() {
         // Increase employee count
         const empCount = teamArray.length + 1;
 
-        // Construct engineer's full name
+        // Construct full name
         const userName = FName + " " + LName;
 
-        // Construct manager's email address
+        // Construct email address
         const userEmail = FName + "@my-company.com";
 
         // Create new engineer object
@@ -134,20 +134,20 @@ function createIntern() {
             type: "input",
             message: "Enter the intern's school:",
             name: "school",
-            default: "Hogwarts"
+            default: "GA Tech"
         },
     ]).then(({ FName, LName, school }) => {
         // Increase employee count
         const empCount = teamArray.length + 1;
 
-        // Construct engineer's full name
+        // Construct full name
         const userName = FName + " " + LName;
 
-        // Construct manager's email address
+        // Construct email address
         const userEmail = FName + "@my-company.com";
 
         // Create new engineer object
-        const intern = new Engineer(userName, empCount, userEmail, school);
+        const intern = new Intern(userName, empCount, userEmail, school);
 
         // Add manager to teamArray
         teamArray.push(intern);
