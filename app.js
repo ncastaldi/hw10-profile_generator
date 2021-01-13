@@ -14,10 +14,44 @@ let teamArray = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+function createManager() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Enter the manager's first name:",
+            name: "mgrFName",
+            default: "John"
+        },
+        {
+            type: "input",
+            message: "Enter the manager's last name:",
+            name: "mgrLName",
+            default: "Doe"
+        },
+        {
+            type: "input",
+            message: "Enter the manager's office number:",
+            name: "mgrOffice",
+            default: "100"
+        },
+    ]).then(({ mgrFName, mgrLName, mgrOffice }) => {
+        // Construct manager's full name
+        const mgrName = mgrFName + " " + mgrLName;
 
+        // Construct manager's email address
+        const mgrEmail = mgrFName + "@my-company.com";
 
+        // Create new manager object
+        const manager = new Manager(mgrName, 1, mgrEmail, mgrOffice);
 
+        // Add manager to teamArray
+        teamArray.push(manager);
 
+        console.log(teamArray);
+    });
+}
+
+createManager();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
