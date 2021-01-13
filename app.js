@@ -60,24 +60,64 @@ function showCreateTeamMenu() {
             name: "menuChoice",
         },
     ]).then(({ menuChoice }) => {
-        if (menuChoice === "Finished") {
-            // ADD CODE
-        } else {
-            createEmployee(menuChoice);
+        switch (menuChoice) {
+            case "Engineer":
+                createEngineer();
+                break;
+            case "Intern":
+                createIntern();
+                break;
+            default:
+                // Look at assignment for next steps here.
+                break;
         }
     });
 }
 
-function createEmployee(empType) {
-    switch (empType) {
-        case "Engineer":
-            break;
+function createEngineer() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Enter the engineer's first name:",
+            name: "FName",
+            default: "Maurice"
+        },
+        {
+            type: "input",
+            message: "Enter the engineer's last name:",
+            name: "LName",
+            default: "Moss"
+        },
+        {
+            type: "input",
+            message: "Enter the engineer's GitHub account name:",
+            name: "github",
+            default: "ncastaldi"
+        },
+    ]).then(({ FName, LName, github }) => {
+        // Increase employee count
+        const empCount = teamArray.length + 1;
 
-        case "Intern":
-            break;
-    }
+        // Construct engineer's full name
+        const userName = FName + " " + LName;
+
+        // Construct manager's email address
+        const userEmail = FName + "@my-company.com";
+
+        // Create new engineer object
+        const engineer = new Engineer(userName, empCount, userEmail, github);
+
+        // Add manager to teamArray
+        teamArray.push(engineer);
+
+        console.log(teamArray);
+        showCreateTeamMenu();
+    });
 }
 
+function createIntern() {
+
+}
 
 createManager();
 
