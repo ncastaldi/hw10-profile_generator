@@ -47,9 +47,34 @@ function createManager() {
         // Add manager to teamArray
         teamArray.push(manager);
 
-        console.log(teamArray);
+        showCreateTeamMenu();
     });
 }
+
+function showCreateTeamMenu() {
+    inquirer.prompt([
+        {
+            type: "list",
+            message: "Select type of employee to create:",
+            choices: ["Engineer", "Intern"],
+            name: "menuChoice",
+        },
+    ]).then(answers => {
+        console.log(answers);
+        // switch (menuChoice) {
+        //     case "Engineer":
+        //         console.log("engineer");
+        //         break;
+        //     case "Intern":
+        //         console.log("intern");
+        //         break;
+    });
+}
+
+// createEmp(empType){
+
+// }
+
 
 createManager();
 
