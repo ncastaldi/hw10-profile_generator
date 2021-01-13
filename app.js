@@ -20,13 +20,13 @@ function createManager() {
             type: "input",
             message: "Enter the manager's first name:",
             name: "mgrFName",
-            default: "John"
+            default: "Jen"
         },
         {
             type: "input",
             message: "Enter the manager's last name:",
             name: "mgrLName",
-            default: "Doe"
+            default: "Barber"
         },
         {
             type: "input",
@@ -68,6 +68,7 @@ function showCreateTeamMenu() {
                 createIntern();
                 break;
             default:
+                console.log(teamArray);
                 // Look at assignment for next steps here.
                 break;
         }
@@ -110,13 +111,50 @@ function createEngineer() {
         // Add manager to teamArray
         teamArray.push(engineer);
 
-        console.log(teamArray);
+        // Return to menu
         showCreateTeamMenu();
     });
 }
 
 function createIntern() {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Enter the intern's first name:",
+            name: "FName",
+            default: "Roy"
+        },
+        {
+            type: "input",
+            message: "Enter the intern's last name:",
+            name: "LName",
+            default: "Trenneman"
+        },
+        {
+            type: "input",
+            message: "Enter the intern's school:",
+            name: "school",
+            default: "Hogwarts"
+        },
+    ]).then(({ FName, LName, school }) => {
+        // Increase employee count
+        const empCount = teamArray.length + 1;
 
+        // Construct engineer's full name
+        const userName = FName + " " + LName;
+
+        // Construct manager's email address
+        const userEmail = FName + "@my-company.com";
+
+        // Create new engineer object
+        const intern = new Engineer(userName, empCount, userEmail, school);
+
+        // Add manager to teamArray
+        teamArray.push(intern);
+
+        // Return to menu
+        showCreateTeamMenu();
+    });
 }
 
 createManager();
