@@ -81,7 +81,7 @@ function showCreateTeamMenu() {
 
 function createEngineer() {
     // Clear screen before prompting user
-    clear();
+    //clear();
 
     inquirer.prompt([
         {
@@ -177,7 +177,28 @@ function createOutput() {
 }
 
 function initApp() {
-    createManager();
+    //Clear screen before prompting user
+    clear();
+
+    console.log(`Team Page Generator | Created By Nathan Castaldi ©2021
+    
+Follow the prompts to create your team site
+`);
+
+    inquirer.prompt([
+        {
+            type: "list",
+            message: "Are you ready create a team site?",
+            choices: ["Yes", "No"],
+            name: "response",
+        },
+    ]).then(({ response }) => {
+        if (response === "Yes") {
+            createManager();
+        } else if (response === "No") {
+            console.log("Have a nice day!");
+        }
+    });
 }
 
 initApp();
