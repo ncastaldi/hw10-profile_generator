@@ -66,7 +66,6 @@ function showCreateTeamMenu() {
                 createIntern();
                 break;
             default:
-                console.log(teamArray);
                 createOutput();
                 break;
         }
