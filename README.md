@@ -13,17 +13,17 @@ For this assignment, we were asked to build a Node CLI that takes in information
 
 ## Installation
 
-Download the following files to a local folder:
+- Clone the repo to your local machine.
 
-Run `npm install` command from a Bash command line to install dependencies.
+- Run `npm install` command from a Bash command line to install dependencies.
 
 ## Usage
 
-Run `node app.js` command from a Bash command line to start app.
+- Run `node app.js` command from a Bash command line to start app.
 
-Video of App: ![App Walkthrough Video](PATH)
+- Video of App: ![App Walkthrough Video](PATH)
 
-GitHub Repository: [https://github.com/ncastaldi/hw10-profile_generator](https://github.com/ncastaldi/hw10-profile_generator)
+- GitHub Repository: [https://github.com/ncastaldi/hw10-profile_generator](https://github.com/ncastaldi/hw10-profile_generator)
 
 ![./assets/images/repo-screenshot.png](./assets/images/repo-screenshot.png)
 
