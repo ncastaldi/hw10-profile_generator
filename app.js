@@ -176,4 +176,8 @@ function createOutput() {
     });
 }
 
-createManager();
+function initApp() {
+    createManager();
+}
+
+initApp();
