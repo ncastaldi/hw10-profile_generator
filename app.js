@@ -80,8 +80,8 @@ function showCreateTeamMenu() {
 }
 
 function createEngineer() {
-    // Clear screen before prompting user
-    //clear();
+    //Clear screen before prompting user
+    clear();
 
     inquirer.prompt([
         {
@@ -180,11 +180,13 @@ function initApp() {
     //Clear screen before prompting user
     clear();
 
+    // Display welcome message
     console.log(`Team Page Generator | Created By Nathan Castaldi ©2021
-    
+
 Follow the prompts to create your team site
 `);
 
+    // Prompt user to create site; Exit if returns "No"
     inquirer.prompt([
         {
             type: "list",
