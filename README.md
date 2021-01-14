@@ -23,7 +23,9 @@ Run `node app.js` command from a Bash command line to start app.
 
 Video of App: ![App Walkthrough Video](PATH)
 
-GitHub Repository: [URL](URL)
+GitHub Repository: [https://github.com/ncastaldi/hw10-profile_generator](https://github.com/ncastaldi/hw10-profile_generator)
+
+![./assets/images/repo-screenshot.png](./assets/images/repo-screenshot.png)
 
 ## License
 
