@@ -21,7 +21,7 @@ For this assignment, we were asked to build a Node CLI that takes in information
 
 - Run `node app.js` command from a Bash command line to start app.
 
-- Video of App: ![App Walkthrough Video](PATH)
+- App Walkthrough Video: [![App Walkthrough Video](./assets/images/app-screenshot.png)](https://drive.google.com/file/d/1QnFtnlA5PVk5FgKKSuJhTc2h5eLbboL7/view?usp=sharing)
 
 - GitHub Repository: [https://github.com/ncastaldi/hw10-profile_generator](https://github.com/ncastaldi/hw10-profile_generator)
 
